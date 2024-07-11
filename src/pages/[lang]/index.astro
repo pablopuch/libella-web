@@ -7,247 +7,242 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 export async function getStaticPaths() {
-  return ["es", "en"].map((lang) => {
-    return { params: { lang } };
-  });
+    return ["es", "en"].map((lang) => {
+        return { params: { lang } };
+    });
 }
 ---
 
 <Layout title={t("site.title")} description={t("site.description")} lang={lang}>
-  <div class="py-16 bg-white">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-        <div
-            class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
-        >
-            <div class="md:5/12 lg:w-5/12 rounded-lg overflow-hidden">
-                <img
-                    src="/libella-pilates-(1).webp"
-                    alt="image"
-                    loading="lazy"
-                    width=""
-                    height=""
-                />
-            </div>
-            <div class="md:7/12 lg:w-6/12">
-                <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
-                    Nuxt development is carried out by passionate developers
-                </h2>
-                <p class="mt-6 text-gray-600">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit. Eum omnis voluptatem accusantium nemo perspiciatis
-                    delectus atque autem! Voluptatum tenetur beatae unde
-                    aperiam, repellat expedita consequatur! Officiis id
-                    consequatur atque doloremque!
-                </p>
-                <p class="mt-4 text-gray-600">
-                    Nobis minus voluptatibus pariatur dignissimos libero
-                    quaerat iure expedita at? Asperiores nemo possimus
-                    nesciunt dicta veniam aspernatur quam mollitia.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="py-16 bg-white">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-        <div
-            class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
-        >
-            <div class="md:7/12 lg:w-6/12">
-                <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
-                    Nuxt development is carried out by passionate developers
-                </h2>
-                <p class="mt-6 text-gray-600">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit. Eum omnis voluptatem accusantium nemo perspiciatis
-                    delectus atque autem! Voluptatum tenetur beatae unde
-                    aperiam, repellat expedita consequatur! Officiis id
-                    consequatur atque doloremque!
-                </p>
-                <p class="mt-4 text-gray-600">
-                    Nobis minus voluptatibus pariatur dignissimos libero
-                    quaerat iure expedita at? Asperiores nemo possimus
-                    nesciunt dicta veniam aspernatur quam mollitia.
-                </p>
-            </div>
-            <div class="md:5/12 lg:w-5/12 rounded-lg overflow-hidden">
-                <img
-                    src="/libella-pilates-(1).webp"
-                    alt="image"
-                    loading="lazy"
-                    width=""
-                    height=""
-                />
-            </div>
-        </div>
-    </div>
-</div>
-
-<link
-    rel="stylesheet"
-    href="https://cdn.tailgrids.com/tailgrids-fallback.css"
-/>
-
-<!-- ====== Cards Section Start -->
-<section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#ffffff]">
-    <div class="container">
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full md:w-1/2 xl:w-1/3 px-4">
-                <div class="bg-white rounded-lg overflow-hidden mb-10">
+    <div class="py-16 bg-white">
+        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+            <div
+                class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
+            >
+                <div class="md:5/12 lg:w-5/12 rounded-lg overflow-hidden">
                     <img
                         src="/libella-pilates-(1).webp"
-                        loading="lazy"
                         alt="image"
-                        class="w-full"
+                        loading="lazy"
+                        width=""
+                        height=""
                     />
-                    <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
-                        <h3>
-                            <a
-                                href="javascript:void(0)"
-                                class="font-semibold
-                    text-dark text-xl
-                    sm:text-[22px]
-                    md:text-xl
-                    lg:text-[22px]
-                    xl:text-xl
-                    2xl:text-[22px]
-                    mb-4
-                    block
-                    hover:text-primary"
-                            >
-                                50+ Best creative website themes & templates
-                            </a>
-                        </h3>
-                        <p
-                            class="text-base text-body-color leading-relaxed mb-7"
-                        >
-                            Lorem ipsum dolor sit amet pretium consectetur
-                            adipiscing elit. Lorem consectetur adipiscing
-                            elit.
-                        </p>
-                        <a
-                            href="javascript:void(0)"
-                            class="inline-block
-                 py-2
-                 px-7
-                 border border-[#E5E7EB]
-                 rounded-full
-                 text-base text-body-color
-                 font-medium
-                 hover:border-primary hover:bg-primary hover:text-white
-                 transition"
-                        >
-                            View Details
-                        </a>
-                    </div>
                 </div>
-            </div>
-
-            <div class="w-full md:w-1/2 xl:w-1/3 px-4">
-                <div class="bg-white rounded-lg overflow-hidden mb-10">
-                    <img
-                        src="/libella-pilates-(5).webp"
-                        loading="lazy"
-                        alt="image"
-                        class="w-full"
-                    />
-                    <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
-                        <h3>
-                            <a
-                                href="javascript:void(0)"
-                                class="font-semibold
-                    text-dark text-xl
-                    sm:text-[22px]
-                    md:text-xl
-                    lg:text-[22px]
-                    xl:text-xl
-                    2xl:text-[22px]
-                    mb-4
-                    block
-                    hover:text-primary"
-                            >
-                                The ultimate UX and UI guide to card design
-                            </a>
-                        </h3>
-                        <p
-                            class="text-base text-body-color leading-relaxed mb-7"
-                        >
-                            Lorem ipsum dolor sit amet pretium consectetur
-                            adipiscing elit. Lorem consectetur adipiscing
-                            elit.
-                        </p>
-                        <a
-                            href="javascript:void(0)"
-                            class="inline-block
-                 py-2
-                 px-7
-                 border border-[#E5E7EB]
-                 rounded-full
-                 text-base text-body-color
-                 font-medium
-                 hover:border-primary hover:bg-primary hover:text-white
-                 transition"
-                        >
-                            View Details
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full md:w-1/2 xl:w-1/3 px-4">
-                <div class="bg-white rounded-lg overflow-hidden mb-10">
-                    <img
-                        src="/libella-pilates-(6).webp"
-                        loading="lazy"
-                        alt="image"
-                        class="w-full"
-                    />
-                    <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
-                        <h3>
-                            <a
-                                href="javascript:void(0)"
-                                class="font-semibold
-                    text-dark text-xl
-                    sm:text-[22px]
-                    md:text-xl
-                    lg:text-[22px]
-                    xl:text-xl
-                    2xl:text-[22px]
-                    mb-4
-                    block
-                    hover:text-primary"
-                            >
-                                Creative Card Component designs graphic
-                                elements
-                            </a>
-                        </h3>
-                        <p
-                            class="text-base text-body-color leading-relaxed mb-7"
-                        >
-                            Lorem ipsum dolor sit amet pretium consectetur
-                            adipiscing elit. Lorem consectetur adipiscing
-                            elit.
-                        </p>
-                        <a
-                            href="javascript:void(0)"
-                            class="inline-block
-                 py-2
-                 px-7
-                 border border-[#E5E7EB]
-                 rounded-full
-                 text-base text-body-color
-                 font-medium
-                 hover:border-primary hover:bg-primary hover:text-white
-                 transition"
-                        >
-                            View Details
-                        </a>
-                    </div>
+                <div class="md:7/12 lg:w-6/12">
+                    <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+                        Nuxt development is carried out by passionate developers
+                    </h2>
+                    <p class="mt-6 text-gray-600">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Eum omnis voluptatem accusantium nemo perspiciatis
+                        delectus atque autem! Voluptatum tenetur beatae unde
+                        aperiam, repellat expedita consequatur! Officiis id
+                        consequatur atque doloremque!
+                    </p>
+                    <p class="mt-4 text-gray-600">
+                        Nobis minus voluptatibus pariatur dignissimos libero
+                        quaerat iure expedita at? Asperiores nemo possimus
+                        nesciunt dicta veniam aspernatur quam mollitia.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- ====== Cards Section End -->
+
+    <div class="py-16 bg-white">
+        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+            <div
+                class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
+            >
+                <div class="md:7/12 lg:w-6/12">
+                    <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+                        Nuxt development is carried out by passionate developers
+                    </h2>
+                    <p class="mt-6 text-gray-600">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Eum omnis voluptatem accusantium nemo perspiciatis
+                        delectus atque autem! Voluptatum tenetur beatae unde
+                        aperiam, repellat expedita consequatur! Officiis id
+                        consequatur atque doloremque!
+                    </p>
+                    <p class="mt-4 text-gray-600">
+                        Nobis minus voluptatibus pariatur dignissimos libero
+                        quaerat iure expedita at? Asperiores nemo possimus
+                        nesciunt dicta veniam aspernatur quam mollitia.
+                    </p>
+                </div>
+                <div class="md:5/12 lg:w-5/12 rounded-lg overflow-hidden">
+                    <img
+                        src="/libella-pilates-(1).webp"
+                        alt="image"
+                        loading="lazy"
+                        width=""
+                        height=""
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== Cards Section Start -->
+    <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#ffffff]">
+        <div class="container">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <img
+                            src="/libella-pilates-(1).webp"
+                            loading="lazy"
+                            alt="image"
+                            class="w-full"
+                        />
+                        <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                            <h3>
+                                <a
+                                    href="javascript:void(0)"
+                                    class="font-semibold
+                    text-dark text-xl
+                    sm:text-[22px]
+                    md:text-xl
+                    lg:text-[22px]
+                    xl:text-xl
+                    2xl:text-[22px]
+                    mb-4
+                    block
+                    hover:text-primary"
+                                >
+                                    50+ Best creative website themes & templates
+                                </a>
+                            </h3>
+                            <p
+                                class="text-base text-body-color leading-relaxed mb-7"
+                            >
+                                Lorem ipsum dolor sit amet pretium consectetur
+                                adipiscing elit. Lorem consectetur adipiscing
+                                elit.
+                            </p>
+                            <a
+                                href="javascript:void(0)"
+                                class="inline-block
+                 py-2
+                 px-7
+                 border border-[#E5E7EB]
+                 rounded-full
+                 text-base text-body-color
+                 font-medium
+                 hover:border-primary hover:bg-primary hover:text-white
+                 transition"
+                            >
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <img
+                            src="/libella-pilates-(5).webp"
+                            loading="lazy"
+                            alt="image"
+                            class="w-full"
+                        />
+                        <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                            <h3>
+                                <a
+                                    href="javascript:void(0)"
+                                    class="font-semibold
+                    text-dark text-xl
+                    sm:text-[22px]
+                    md:text-xl
+                    lg:text-[22px]
+                    xl:text-xl
+                    2xl:text-[22px]
+                    mb-4
+                    block
+                    hover:text-primary"
+                                >
+                                    The ultimate UX and UI guide to card design
+                                </a>
+                            </h3>
+                            <p
+                                class="text-base text-body-color leading-relaxed mb-7"
+                            >
+                                Lorem ipsum dolor sit amet pretium consectetur
+                                adipiscing elit. Lorem consectetur adipiscing
+                                elit.
+                            </p>
+                            <a
+                                href="javascript:void(0)"
+                                class="inline-block
+                 py-2
+                 px-7
+                 border border-[#E5E7EB]
+                 rounded-full
+                 text-base text-body-color
+                 font-medium
+                 hover:border-primary hover:bg-primary hover:text-white
+                 transition"
+                            >
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <img
+                            src="/libella-pilates-(6).webp"
+                            loading="lazy"
+                            alt="image"
+                            class="w-full"
+                        />
+                        <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                            <h3>
+                                <a
+                                    href="javascript:void(0)"
+                                    class="font-semibold
+                    text-dark text-xl
+                    sm:text-[22px]
+                    md:text-xl
+                    lg:text-[22px]
+                    xl:text-xl
+                    2xl:text-[22px]
+                    mb-4
+                    block
+                    hover:text-primary"
+                                >
+                                    Creative Card Component designs graphic
+                                    elements
+                                </a>
+                            </h3>
+                            <p
+                                class="text-base text-body-color leading-relaxed mb-7"
+                            >
+                                Lorem ipsum dolor sit amet pretium consectetur
+                                adipiscing elit. Lorem consectetur adipiscing
+                                elit.
+                            </p>
+                            <a
+                                href="javascript:void(0)"
+                                class="inline-block
+                 py-2
+                 px-7
+                 border border-[#E5E7EB]
+                 rounded-full
+                 text-base text-body-color
+                 font-medium
+                 hover:border-primary hover:bg-primary hover:text-white
+                 transition"
+                            >
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== Cards Section End -->
 </Layout>

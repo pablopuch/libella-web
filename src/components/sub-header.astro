@@ -11,10 +11,17 @@ export async function getStaticPaths() {
 }
 ---
 
-<section
-    class="bg-center bg-no-repeat [background-size:cover] bg-[url('/libella-pilates-(7).webp')] bg-gray-500 bg-blend-multiply object-cover object-center"
->
-    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+
+<section class="relative">
+    <img
+        src="/libella-pilates-(7).webp"
+        alt="Imagen de fondo"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div
+        class="relative px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56"
+    >
         <h1
             class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
         >
