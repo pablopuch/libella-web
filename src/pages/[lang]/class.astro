@@ -1,0 +1,253 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PriceCards from "../../components/price-cards.astro";
+
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+    return ["es", "en"].map((lang) => {
+        return { params: { lang } };
+    });
+}
+---
+
+<Layout title={t("site.title")} description={t("site.title")} lang={lang}>
+    <div class="py-16 bg-white">
+        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+            <div
+                class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
+            >
+                <div class="md:5/12 lg:w-5/12">
+                    <img
+                        src="/libella-pilates-(2).webp"
+                        alt="image"
+                        loading="lazy"
+                        width=""
+                        height=""
+                    />
+                </div>
+                <div class="md:7/12 lg:w-6/12">
+                    <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+                        Nuxt development is carried out by passionate developers
+                    </h2>
+                    <p class="mt-6 text-gray-600">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Eum omnis voluptatem accusantium nemo perspiciatis
+                        delectus atque autem! Voluptatum tenetur beatae unde
+                        aperiam, repellat expedita consequatur! Officiis id
+                        consequatur atque doloremque!
+                    </p>
+                    <p class="mt-4 text-gray-600">
+                        Nobis minus voluptatibus pariatur dignissimos libero
+                        quaerat iure expedita at? Asperiores nemo possimus
+                        nesciunt dicta veniam aspernatur quam mollitia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-16 bg-white">
+        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+            <div
+                class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
+            >
+                <div class="md:7/12 lg:w-6/12">
+                    <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+                        Nuxt development is carried out by passionate developers
+                    </h2>
+                    <p class="mt-6 text-gray-600">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Eum omnis voluptatem accusantium nemo perspiciatis
+                        delectus atque autem! Voluptatum tenetur beatae unde
+                        aperiam, repellat expedita consequatur! Officiis id
+                        consequatur atque doloremque!
+                    </p>
+                    <p class="mt-4 text-gray-600">
+                        Nobis minus voluptatibus pariatur dignissimos libero
+                        quaerat iure expedita at? Asperiores nemo possimus
+                        nesciunt dicta veniam aspernatur quam mollitia.
+                    </p>
+                </div>
+                <div class="md:5/12 lg:w-5/12">
+                    <img
+                        src="/libella-pilates-(3).webp"
+                        alt="image"
+                        loading="lazy"
+                        width=""
+                        height=""
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <PriceCards />
+
+    <div class="my-32">
+        <!-- Accordion 1 -->
+
+        <h2 id="accordion-flush-heading-1">
+            <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 rtl:text-right border-b dark:border-gray-700 gap-3"
+                data-accordion-target="#accordion-flush-body-1"
+            >
+                <span>What is Flowbite?</span>
+                <svg
+                    data-accordion-icon
+                    class="w-3 h-3 rotate-180 shrink-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5 5 1 1 5"></path>
+                </svg>
+            </button>
+        </h2>
+        <div
+            id="accordion-flush-body-1"
+            class="hidden"
+            aria-labelledby="accordion-flush-heading-1"
+        >
+            <div class="py-5 border-b dark:border-gray-700">
+                <p>
+                    Flowbite is an open-source library of interactive components
+                    built on top of Tailwind CSS including buttons, dropdowns,
+                    modals, navbars, and more.
+                </p>
+                <p>
+                    Check out this guide to learn how to and start developing
+                    websites even faster with components on top of Tailwind CSS.
+                </p>
+            </div>
+        </div>
+
+        <!-- Accordion 2 -->
+
+        <h2 id="accordion-flush-heading-2">
+            <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 rtl:text-right border-b dark:border-gray-700 gap-3"
+                data-accordion-target="#accordion-flush-body-2"
+            >
+                <span
+                    >What are the differences between Flowbite and Tailwind UI?</span
+                >
+                <svg
+                    data-accordion-icon
+                    class="w-3 h-3 rotate-180 shrink-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5 5 1 1 5"></path>
+                </svg>
+            </button>
+        </h2>
+        <div
+            id="accordion-flush-body-2"
+            class="hidden"
+            aria-labelledby="accordion-flush-heading-1"
+        >
+            <div class="py-5 border-b dark:border-gray-700">
+                <p>
+                    Flowbite is an open-source library of interactive components
+                    built on top of Tailwind CSS including buttons, dropdowns,
+                    modals, navbars, and more.
+                </p>
+            </div>
+        </div>
+
+        <!-- Accordion 3 -->
+
+        <h2 id="accordion-flush-heading-3">
+            <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 rtl:text-right border-b dark:border-gray-700 gap-3"
+                data-accordion-target="#accordion-flush-body-3"
+            >
+                <span>Is there a Figma file available?</span>
+                <svg
+                    data-accordion-icon
+                    class="w-3 h-3 rotate-180 shrink-0"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5 5 1 1 5"></path>
+                </svg>
+            </button>
+        </h2>
+        <div
+            id="accordion-flush-body-3"
+            class="hidden"
+            aria-labelledby="accordion-flush-heading-1"
+        >
+            <div class="py-5 border-b dark:border-gray-700">
+                <p>
+                    Flowbite is an open-source library of interactive components
+                    built on top of Tailwind CSS including buttons, dropdowns,
+                    modals, navbars, and more.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const accordions = document.querySelectorAll(
+                "[data-accordion-target]",
+            );
+            accordions.forEach((button) => {
+                button.addEventListener("click", function () {
+                    const targetId = this.getAttribute("data-accordion-target");
+                    const targetElement = document.querySelector(targetId);
+                    const expanded =
+                        this.getAttribute("aria-expanded") === "true";
+
+                    // Toggle aria-expanded attribute
+                    this.setAttribute("aria-expanded", !expanded);
+
+                    // Toggle the hidden class
+                    if (!expanded) {
+                        targetElement.classList.remove("hidden");
+                        targetElement.classList.add("block");
+                        button.classList.add("font-medium"); // Agrega font-medium al botón
+                    } else {
+                        targetElement.classList.add("hidden");
+                        targetElement.classList.remove("block");
+                        button.classList.remove("font-medium"); // Remueve font-medium del botón
+                    }
+
+                    // Rotate the icon
+                    const icon = this.querySelector("[data-accordion-icon]");
+                    if (icon) {
+                        icon.classList.toggle("rotate-180");
+                    }
+                });
+            });
+        });
+    </script>
+</Layout>

@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import SubHeader from "../components/sub-header.astro";
+import { useTranslations, type UiType } from "../i18n/utils";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, lang } = Astro.props;
+
+const t = useTranslations(lang as UiType);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/icon-libella.webp" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <BaseHead lang={lang} title={title} description={description} />
+
+  <body>
+    <Header title={t("site.title")} lang={lang} />
+    <SubHeader />
+
+    <main
+      class="max-w-screen-xl flex-wrap items-center justify-between mx-auto p-4"
+    >
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
