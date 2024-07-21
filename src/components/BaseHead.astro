@@ -14,7 +14,7 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string;
-	lang: string;
+	lang: UiType;
 }
 
 const canonicalPathname = pathNameIsInLanguage(Astro.url.pathname, DEFAULT_LANG)

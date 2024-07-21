@@ -1,0 +1,79 @@
+    <form>
+        <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mb-4">
+            <div>
+                <input
+                    name="form-name"
+                    type="text"
+                    class="border-2 border-[#050C30] py-3 px-6 w-full block min-h-[auto] rounded-md"
+                    placeholder="Nombre"
+                    required
+                />
+            </div>
+
+            <div>
+                <input
+                    type="email"
+                    name="form-email"
+                    class="border-2 border-[#050C30] py-3 px-6 w-full block min-h-[auto] rounded-md"
+                    placeholder="Email"
+                    required
+                />
+            </div>
+
+            <div>
+                <input
+                    type="tel"
+                    name="form-tel"
+                    class="border-2 border-[#050C30] py-3 px-6 w-full block min-h-[auto] rounded-md"
+                    placeholder="Teléfono"
+                    required
+                />
+            </div>
+
+            <div>
+                <input
+                    type="text"
+                    name="form-subject"
+                    class="border-2 border-[#050C30] py-3 px-6 w-full block min-h-[auto] rounded-md"
+                    placeholder="Asunto"
+                    required
+                />
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <textarea
+                rows="4"
+                name="form-text"
+                placeholder="Por favor, indícanos su comentario"
+                class="resize-none rounded-md border-2 border-[#050C30] py-3 px-6 w-full block text-base font-medium outline-none"
+                required></textarea>
+        </div>
+
+        <div class="flex items-center mb-6">
+            <div class="flex items-center h-5">
+                <input name="com" id="info" type="checkbox" class="h-6 w-6" />
+            </div>
+            <div class="text-sm ml-3">
+                <label for="info" class="text-[#050C30] text-cover">
+                    Aceptar la politica de privacidad
+                </label>
+            </div>
+        </div>
+
+        <div
+            class="text-danger flex items-center justify-center my-5 text-[#FF0000]"
+            id="error-mail-modal"
+        >
+        </div>
+
+        <div class="flex items-center justify-center">
+            <button
+                type="button"
+                id="send_mail_button"
+                class="border-2 border-[#050C30] text-[#050C30] py-3 px-6 rounded-md font-bold"
+                >Enviar</button
+            >
+            <div class="coches-de-lujo-loader" id="loader-mail-modal"></div>
+        </div>
+    </form>

@@ -12,6 +12,14 @@ export async function getStaticPaths() {
     });
 }
 
+// Definimos el tipo de las propiedades que esperaremos
+import type { UiType } from "../i18n/utils";
+
+interface Props {
+  title: string;
+  lang: UiType;
+}
+
 const homeSlug = `/${lang || ""}`;
 const blogSlug = `/${lang || ""}/blog`;
 const aboutSlug = `/${lang || ""}/about`;
@@ -19,7 +27,7 @@ const classSlug = `/${lang || ""}/class`;
 const contactSlug = `/${lang || ""}/contact`;
 ---
 
-<header>
+<header title={t("site.title")} lang={lang}>
   <nav class="bg-white dark:bg-gray-900">
     <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-2xl"

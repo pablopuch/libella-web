@@ -1,7 +1,24 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Accordion from "../../components/Accordion.astro";
+
+const faqItems = [
+  {
+    question: "Lorem ipsum dolor sit amet?",
+    answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat velit vel felis bibendum, ut vestibulum mauris vestibulum. Nullam fermentum tellus a nulla cursus, et malesuada elit congue.`,
+  },
+  {
+    question: "Sed do eiusmod tempor incididunt ut labore?",
+    answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+  },
+  {
+    question: "Duis aute irure dolor in reprehenderit?",
+    answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+  },
+];
 
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Form from "../../components/Form.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -122,249 +139,7 @@ export async function getStaticPaths() {
         </div>
     </div>
 
-    <form>
-        <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mb-4">
-            <div>
-                <input
-                    name="form-name"
-                    type="text"
-                    class="border-2 border-[#050C30] py-3 px-6 w-full block min-h-[auto] rounded-md"
-                    placeholder="Nombre"
-                    required
-                />
-            </div>
+    <Form />
 
-            <div>
-                <input
-                    type="email"
-                    name="form-email"
-                    class="border-2 border-[#050C30] py-3 px-6 w-full block min-h-[auto] rounded-md"
-                    placeholder="Email"
-                    required
-                />
-            </div>
-
-            <div>
-                <input
-                    type="tel"
-                    name="form-tel"
-                    class="border-2 border-[#050C30] py-3 px-6 w-full block min-h-[auto] rounded-md"
-                    placeholder="Teléfono"
-                    required
-                />
-            </div>
-
-            <div>
-                <input
-                    type="text"
-                    name="form-subject"
-                    class="border-2 border-[#050C30] py-3 px-6 w-full block min-h-[auto] rounded-md"
-                    placeholder="Asunto"
-                    required
-                />
-            </div>
-        </div>
-
-        <div class="mb-6">
-            <textarea
-                rows="4"
-                name="form-text"
-                placeholder="Por favor, indícanos su comentario"
-                class="resize-none rounded-md border-2 border-[#050C30] py-3 px-6 w-full block text-base font-medium outline-none"
-                required></textarea>
-        </div>
-
-        <div class="flex items-center mb-6">
-            <div class="flex items-center h-5">
-                <input name="com" id="info" type="checkbox" class="h-6 w-6" />
-            </div>
-            <div class="text-sm ml-3">
-                <label for="info" class="text-[#050C30] text-cover">
-                    Aceptar la politica de privacidad
-                </label>
-            </div>
-        </div>
-
-        <div
-            class="text-danger flex items-center justify-center my-5 text-[#FF0000]"
-            id="error-mail-modal"
-        >
-        </div>
-
-        <div class="flex items-center justify-center">
-            <button
-                type="button"
-                id="send_mail_button"
-                class="border-2 border-[#050C30] text-[#050C30] py-3 px-6 rounded-md font-bold"
-                >Enviar</button
-            >
-            <div class="coches-de-lujo-loader" id="loader-mail-modal"></div>
-        </div>
-    </form>
-
-  
-
-    <div class="my-32">
-        <!-- Accordion 1 -->
-
-        <h2 id="accordion-flush-heading-1">
-            <button
-                type="button"
-                class="flex items-center justify-between w-full py-5 rtl:text-right border-b dark:border-gray-700 gap-3"
-                data-accordion-target="#accordion-flush-body-1"
-            >
-                <span>What is Flowbite?</span>
-                <svg
-                    data-accordion-icon
-                    class="w-3 h-3 rotate-180 shrink-0"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                >
-                    <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5 5 1 1 5"></path>
-                </svg>
-            </button>
-        </h2>
-        <div
-            id="accordion-flush-body-1"
-            class="hidden"
-            aria-labelledby="accordion-flush-heading-1"
-        >
-            <div class="py-5 border-b dark:border-gray-700">
-                <p>
-                    Flowbite is an open-source library of interactive components
-                    built on top of Tailwind CSS including buttons, dropdowns,
-                    modals, navbars, and more.
-                </p>
-                <p>
-                    Check out this guide to learn how to and start developing
-                    websites even faster with components on top of Tailwind CSS.
-                </p>
-            </div>
-        </div>
-
-        <!-- Accordion 2 -->
-
-        <h2 id="accordion-flush-heading-2">
-            <button
-                type="button"
-                class="flex items-center justify-between w-full py-5 rtl:text-right border-b dark:border-gray-700 gap-3"
-                data-accordion-target="#accordion-flush-body-2"
-            >
-                <span
-                    >What are the differences between Flowbite and Tailwind UI?</span
-                >
-                <svg
-                    data-accordion-icon
-                    class="w-3 h-3 rotate-180 shrink-0"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                >
-                    <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5 5 1 1 5"></path>
-                </svg>
-            </button>
-        </h2>
-        <div
-            id="accordion-flush-body-2"
-            class="hidden"
-            aria-labelledby="accordion-flush-heading-1"
-        >
-            <div class="py-5 border-b dark:border-gray-700">
-                <p>
-                    Flowbite is an open-source library of interactive components
-                    built on top of Tailwind CSS including buttons, dropdowns,
-                    modals, navbars, and more.
-                </p>
-            </div>
-        </div>
-
-        <!-- Accordion 3 -->
-
-        <h2 id="accordion-flush-heading-3">
-            <button
-                type="button"
-                class="flex items-center justify-between w-full py-5 rtl:text-right border-b dark:border-gray-700 gap-3"
-                data-accordion-target="#accordion-flush-body-3"
-            >
-                <span>Is there a Figma file available?</span>
-                <svg
-                    data-accordion-icon
-                    class="w-3 h-3 rotate-180 shrink-0"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                >
-                    <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5 5 1 1 5"></path>
-                </svg>
-            </button>
-        </h2>
-        <div
-            id="accordion-flush-body-3"
-            class="hidden"
-            aria-labelledby="accordion-flush-heading-1"
-        >
-            <div class="py-5 border-b dark:border-gray-700">
-                <p>
-                    Flowbite is an open-source library of interactive components
-                    built on top of Tailwind CSS including buttons, dropdowns,
-                    modals, navbars, and more.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const accordions = document.querySelectorAll(
-                "[data-accordion-target]",
-            );
-            accordions.forEach((button) => {
-                button.addEventListener("click", function () {
-                    const targetId = this.getAttribute("data-accordion-target");
-                    const targetElement = document.querySelector(targetId);
-                    const expanded =
-                        this.getAttribute("aria-expanded") === "true";
-
-                    // Toggle aria-expanded attribute
-                    this.setAttribute("aria-expanded", !expanded);
-
-                    // Toggle the hidden class
-                    if (!expanded) {
-                        targetElement.classList.remove("hidden");
-                        targetElement.classList.add("block");
-                        button.classList.add("font-medium"); // Agrega font-medium al botón
-                    } else {
-                        targetElement.classList.add("hidden");
-                        targetElement.classList.remove("block");
-                        button.classList.remove("font-medium"); // Remueve font-medium del botón
-                    }
-
-                    // Rotate the icon
-                    const icon = this.querySelector("[data-accordion-icon]");
-                    if (icon) {
-                        icon.classList.toggle("rotate-180");
-                    }
-                });
-            });
-        });
-    </script>
+    <Accordion items={faqItems} />
 </Layout>
